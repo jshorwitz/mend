@@ -28,8 +28,12 @@ System.register(function(app, auth, database) {
   // Setting the favicon and static folder
   app.use(favicon(__dirname + '/public/assets/img/favicon.ico'));
 
+  // Adding robots and humans txt    
+  app.use(express.static(__dirname + '/public/assets/'));
+
   // Adding robots and humans txt
-  app.use(express.static(__dirname + '/public/assets/static'));
+  app.use(express.static(__dirname + '/public/assets/'));
+
 
   return System;
 });
